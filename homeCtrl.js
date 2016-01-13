@@ -23,7 +23,7 @@ app.controller('ProjectController', ['$scope', function ($scope) {
         }
     ];
 
-    $scope.changeData = function () {
+    $scope.addProject = function () {
         counter++;
 
         $scope.projects.push({name:'Project ' + counter})
