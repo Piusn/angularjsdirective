@@ -1,40 +1,33 @@
 var app = angular.module('demo', []);
 
-app.controller('CustomersController', ['$scope', function ($scope) {
+app.controller('ProjectController', ['$scope', function ($scope) {
     var counter = 0;
-    $scope.customer = {
-        name: 'David',
-        street: '1234 Anywhere St.'
+   
+    $scope.project = {
+        name: 'Initial project to be sent to the directive'
     };
-    
-    $scope.customers = [
+
+    $scope.name = 6;
+
+    $scope.projects = [
         {
-            name: 'David',
-            street: '1234 Anywhere St.'
+            name: 'Project 1'
         },
         {
-            name: 'Tina',
-            street: '1800 Crest St.'
+            name: 'Project 2'
+
         },
         {
-            name: 'Michelle',
-            street: '890 Main St.'
+            name: 'Project 3'
+
         }
     ];
 
-    $scope.addCustomer = function () {
-        counter++;
-        $scope.customers.push({
-            name: 'New Customer' + counter,
-            street: counter + ' Cedar Point St.'
-        });
-    };
-
     $scope.changeData = function () {
         counter++;
-        $scope.customer = {
-            name: 'James',
-            street: counter + ' Cedar Point St.'
-        };
+
+        $scope.projects.push({name:'Project ' + counter})
+
     };
-}]);
+
+} ]);
